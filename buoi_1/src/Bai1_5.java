@@ -1,6 +1,7 @@
 import java.util.Scanner;
-public class Main {
+public class Bai1_5 {
     //bai1a
+
     public static int TinhTongSoChan(float n) {
         int s = 0;
         for (int i = 2; i <= n; i += 2) {
@@ -19,6 +20,7 @@ public class Main {
         return s;
     }
 //bai1b
+
     public static double TinhTongSoTuNhien(int n) {
         double sum = 0;
         for (int i = 1; i <= n; i++) {
@@ -26,7 +28,9 @@ public class Main {
         }
         return sum;
     }
+
 //bai2
+
     public static int UocSo(int n) {
         int dem = 0;
         for (int i = 1; i <= n; i++) {
@@ -39,7 +43,9 @@ public class Main {
     }
 
     ;
-    //bai3
+
+
+//Bai4
 public static int Tong(int so){
     int soTemp;
     int tong = 0;
@@ -64,6 +70,9 @@ public static int Tong(int so){
         System.out.println("Tổng từ 1 đến " + n + " la = " + TinhTongSoLe(n));
         System.out.println("Tổng từ 1 đến " + (float) 1 / n + " la = " + TinhTongSoTuNhien(n));
         System.out.println("Tổng số ước số " + n + " la = " + UocSo(n));
+
+
+        //bai3
 
         int b, c, temp1, temp2, uscln, bscnn;
 
@@ -97,7 +106,7 @@ public static int Tong(int so){
         System.out.println("Bội số chung nhỏ nhất của " + b + " và " + c + " = " +
                 ((b * c) / uscln));
 
-
+//Bai 5
         int P, Q, t = 0;
         System.out.println("Nhập vào số thứ nhất: ");
         P = sc.nextInt();

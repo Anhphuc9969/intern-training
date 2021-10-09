@@ -1,26 +1,30 @@
 import  java.util.Scanner;
 public class Bai4 {
-       const int N = 1e6;
-
-    int a[N];
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-
-            int n;
-            cin >> n;
-            map<int, int> cnt;
-            for(int i = 0; i < n;i++){
-                cin >> a[i];
-            }
-
-            for(int i = 0; i < n;i++){
-                cnt[a[i]]++;
-            }
-            for(auto it : cnt){
-                cout << "Gia tri " << it.first << " xuat hien " << it.second << " lan!\n";
+    public static void listMang(){
+        Scanner sc=new Scanner(System.in);
+        int n,b;
+        System.out.println("Nhap n:");
+        n=sc.nextInt();
+        System.out.println("Nhap c:");
+        b=sc.nextInt();
+        int [] a=new int[n];
+        for(int i=0; i<n; i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int check=Math.abs(a[0]-b);
+        int p=0;
+        for(int i=1; i<n-1; i++)
+        {
+            if(check>Math.abs(a[i]-b)){
+                check=Math.abs(a[i]-b);
+                p=i;
             }
         }
+        System.out.println("gần x nhất:"+a[p]+" vị trí ở "+p);
+    }
+
+    public static void main(String[] args) {
+        listMang();
     }
 }

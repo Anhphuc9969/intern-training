@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Test {
+public class Bai6 {
     public static void phanTich(int n){
         int i=2;
         while(n>1){
@@ -24,7 +24,7 @@ public class Test {
         if (n < 2) {
             return false;
         }
-    
+
         int squareRoot = (int) Math.sqrt(n);
         for (int i = 2; i <= squareRoot; i++) {
             if (n % i == 0) {
