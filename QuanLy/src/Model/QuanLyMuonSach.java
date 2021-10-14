@@ -86,6 +86,7 @@ public class QuanLyMuonSach  {
                 break;
             }
         }
+        System.out.println("list"+banDocList);
     }
 
 
@@ -121,6 +122,7 @@ public class QuanLyMuonSach  {
 
                     }
                 }
+                System.out.println("listttt"+sachList);
             }
 
             //

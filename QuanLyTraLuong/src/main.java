@@ -1,9 +1,13 @@
 import java.util.Scanner;
 import Model.monHoc;
 import Model.giangVien;
+import Model.keKhaiGiangDay;
 public class main {
     public static monHoc[] monHocStorage=new monHoc[1000];
     public static int lenMonHocStorage=0;
+
+    private static keKhaiGiangDay[] keKhaiStogare=new keKhaiGiangDay[1000];
+    public static int lenKeKhaiStogare=0;
 
     public static giangVien[] giangVienStorage=new giangVien[1000];
     public static int lengiangVienStorage=0;
@@ -19,6 +23,17 @@ public class main {
         System.out.println(result);
     }
 
+
+    public static void showKeKhai(){
+        String result="";
+
+
+        for(int i=0;i<lenKeKhaiStogare;i++){
+            result+=keKhaiStogare[i].toString()+"\n";
+        }
+
+        System.out.println(result);
+    }
     public static void showGiangVien(){
         String result="";
 
@@ -27,7 +42,7 @@ public class main {
             result+=giangVienStorage[i].toString()+"\n";
         }
 
-        System.out.println(result);
+        System.out.println( result);
     }
     public static void menu() {
         Scanner sc = new Scanner(System.in);
@@ -47,8 +62,6 @@ public class main {
                 case 1 :
                    monHoc s=new monHoc();
                    s.nhapMonHoc();
-
-
                     monHocStorage[lenMonHocStorage++]=s;
                     showMonHoc();
                     break;
@@ -62,6 +75,12 @@ public class main {
                     break;
 
                 case 3:
+                    keKhaiGiangDay KeKhai=new keKhaiGiangDay();
+
+                    KeKhai.nhapThongKe(giangVienStorage,monHocStorage);
+                    keKhaiStogare[lenKeKhaiStogare++]=KeKhai;
+                    System.out.println(lenKeKhaiStogare);
+                    showKeKhai();
 
                     break;
                 case 4:

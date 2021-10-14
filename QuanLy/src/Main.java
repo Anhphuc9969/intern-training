@@ -73,7 +73,7 @@ public class Main {
             System.out.println("3.Quản lý mượn sách cho từng bạn đọc");
             System.out.println("4.Sắp xếp danh sách quản lý mượn sách theo số lượng");
             System.out.println("5.Sắp xếp danh sách quản lý mượn sách theo tên");
-            System.out.println("5.Tìm kiếm và hiển thị danh sách theo tên bạn đọc");
+            System.out.println("6.Tìm kiếm và hiển thị danh sách theo tên bạn đọc");
             System.out.println("7.Thoát");
             System.out.println("Moi ban chọn chương trình");
             input = sc.nextInt();

@@ -64,6 +64,7 @@ public class monHoc {
         AUTO_ID = autoId;
     }
 
+
     public void nhapMonHoc(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Moi ban nhap thong tin mon hoc:");
