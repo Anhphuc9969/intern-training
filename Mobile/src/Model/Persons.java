@@ -2,18 +2,18 @@
 package Model;
 import java.util.Scanner;
 
-public abstract class Receipt {
+public abstract class Persons {
     private String name;
     private String address;
     private String phoneNumber;
 
-    public Receipt(String name, String address, String phoneNumber) {
+    public Persons(String name, String address, String phoneNumber) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
     }
 
-    public Receipt() {
+    public Persons() {
     }
     public void inputReceipt(){
         System.out.println("Nhập tên: ");
