@@ -80,7 +80,7 @@ public class Main {
                     break;
                 case 4:
                     AssignmentSheet ASS=new AssignmentSheet();
-                    ASS.sortByName(drivesList,lenDriverStorage);
+                    ASS.sortByName(drivesList);
 
                     break;
                 case 5:

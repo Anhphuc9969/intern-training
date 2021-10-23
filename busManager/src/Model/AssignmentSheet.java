@@ -1,6 +1,6 @@
 package Model;
 import java.util.*;
-public class AssignmentSheet {
+public class AssignmentSheet{
 
 
     private Drives drives;
@@ -114,27 +114,24 @@ public class AssignmentSheet {
 
 
 
-//    public static void sortGiamDan(AssignmentSheet[] list, int len) {
-//
-//        for (int i = 0; i < len; i++) {
-//            for (int j = i + i; j < len; j++) {
-//                if (list[i].quantitys > list[j].quantitys) {
-//                    AssignmentSheet temp = list[i];
-//
-//                    list[i] = list[j];
-//
-//                    list[j] = temp;
-//                }
-//            }
-//
-//        }
-//    }
+    public static void sortByTotalRoute(List<AssignmentSheet> list) {
+        Collections.sort(list, new Comparator<AssignmentSheet>() {
+            @Override
+            public int compare(AssignmentSheet o1, AssignmentSheet o2) {
+                return o1.busRouteMap.size()<o1.busRouteMap.size()?1:-1;
+            }
+        });
+    };
 
-    public static void sortByName(List<Drives> list ,int leng){
-       list.sort((o1, o2) -> {
-           return o1.getName().compareTo(o2.getName());
-       });
 
+
+    public static void sortByName(List<Drives> list){
+        Collections.sort(list, new Comparator<Drives>() {
+            @Override
+            public int compare(Drives o1, Drives o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
     }
 
     @Override
@@ -161,6 +158,7 @@ public class AssignmentSheet {
             public void setBusRouteMap (Map < BusRoute, Integer > busRouteMap){
                 this.busRouteMap = busRouteMap;
             }
-        }
+
+}
 
 
