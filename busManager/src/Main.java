@@ -6,6 +6,7 @@ import java.util.*;
 public class Main {
 
     private static List<Drives> drivesList=new ArrayList<>();
+    public static int lenDriverStorage=0;
     private static List<BusRoute> busRouteList  =new ArrayList<BusRoute>();
     private static List<AssignmentSheet> assignmentSheetList=new ArrayList<>();
     private static int len=0;
@@ -78,6 +79,8 @@ public class Main {
                     showAssignmentSheet();
                     break;
                 case 4:
+                    AssignmentSheet ASS=new AssignmentSheet();
+                    ASS.sortByName(drivesList,lenDriverStorage);
 
                     break;
                 case 5:

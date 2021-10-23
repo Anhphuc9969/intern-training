@@ -79,7 +79,7 @@ public class AssignmentSheet {
                         exist=false;
                         //để check mã tuyến đã đc nhập trc đó,ko cho trùng mã tuyến
                         for (Map.Entry<BusRoute, Integer> entry : busRouteMap.entrySet()) {
-                            if (entry.getKey().getIdBusRoute() == idBusRoutes) {-
+                            if (entry.getKey().getIdBusRoute() == idBusRoutes) {
                                 System.out.println("Mã tuyến đã được nhập trước đó!");
                                 exist=true;
                                 break;
@@ -114,38 +114,38 @@ public class AssignmentSheet {
 
 
 
-    public static void sortGiamDan(AssignmentSheet[] list, int len) {
+//    public static void sortGiamDan(AssignmentSheet[] list, int len) {
+//
+//        for (int i = 0; i < len; i++) {
+//            for (int j = i + i; j < len; j++) {
+//                if (list[i].quantitys > list[j].quantitys) {
+//                    AssignmentSheet temp = list[i];
+//
+//                    list[i] = list[j];
+//
+//                    list[j] = temp;
+//                }
+//            }
+//
+//        }
+//    }
 
-        for (int i = 0; i < len; i++) {
-            for (int j = i + i; j < len; j++) {
-                if (list[i].quantitys > list[j].quantitys) {
-                    AssignmentSheet temp = list[i];
-
-                    list[i] = list[j];
-
-                    list[j] = temp;
-                }
-            }
-
-        }
-    }
-
-    public static void sortByName(Drives[] list ,int leng){
-        if (list == null || list.length == 0) {
+    public static void sortByName(List<Drives> list ,int leng){
+        if (list == null || list.size() == 0) {
             System.out.println("Bạn cần nhập danh sách ban doc trước khi sắp xếp!");
             return;
         }
 
         for(int i=0 ; i<leng;i++){
             for (int j=i+1 ; j<leng;j++){
-                int compareName=list[i].getName().compareTo(list[j].getName());
+                int compareName=list.get(i).getName().compareTo(list.get(j).getName());
 
                 if(compareName < 0 ){
-                    Drives temp=list[i];
+                    Drives temp=list.get(i);
 
-                    list[i]=list[j];
+                    list.get(i)=list.get(j);
 
-                    list[j]=temp;
+                    list.get(j)=temp;
                 }
             }
         }
