@@ -81,9 +81,13 @@ public class Main {
                 case 4:
                     AssignmentSheet ASS=new AssignmentSheet();
                     ASS.sortByName(drivesList);
+                    showDrives();
 
                     break;
                 case 5:
+                    AssignmentSheet ASSS=new AssignmentSheet();
+                    ASSS.sortByTotalRoute(assignmentSheetList);
+                    showBusRoute();
 
                     break;
                 case 6:
