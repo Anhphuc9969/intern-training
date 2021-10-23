@@ -131,24 +131,10 @@ public class AssignmentSheet {
 //    }
 
     public static void sortByName(List<Drives> list ,int leng){
-        if (list == null || list.size() == 0) {
-            System.out.println("Bạn cần nhập danh sách ban doc trước khi sắp xếp!");
-            return;
-        }
+       list.sort((o1, o2) -> {
+           return o1.getName().compareTo(o2.getName());
+       });
 
-        for(int i=0 ; i<leng;i++){
-            for (int j=i+1 ; j<leng;j++){
-                int compareName=list.get(i).getName().compareTo(list.get(j).getName());
-
-                if(compareName < 0 ){
-                    Drives temp=list.get(i);
-
-                    list.get(i)=list.get(j);
-
-                    list.get(j)=temp;
-                }
-            }
-        }
     }
 
     @Override
