@@ -6,7 +6,7 @@ import java.util.*;
 public class Main {
 
     private static List<Drives> drivesList=new ArrayList<>();
-    private static List<BusRoute> busRouteList =new ArrayList<>();
+    private static List<BusRoute> busRouteList  =new ArrayList<BusRoute>();
     private static List<AssignmentSheet> assignmentSheetList=new ArrayList<>();
     private static int len=0;
 
@@ -30,6 +30,15 @@ public class Main {
     }
 
     public static void menu() {
+
+        //fake data
+        drivesList.add(new Drives("Phúc","Thanh Hóa","0912212121","A"));
+        drivesList.add(new Drives("Hiền","Hà Nội","012222222","B"));
+
+        busRouteList.add(new BusRoute(10,5));
+        busRouteList.add(new BusRoute(20,10));
+
+
 
         Scanner sc = new Scanner(System.in);
         int input;

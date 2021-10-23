@@ -26,14 +26,14 @@ public class AssignmentSheet {
 
     public void inputAssignmentSheer(List<Drives> drivesList, List<BusRoute> busRouteList) {
         boolean exist = false;
-        int idDrives;
-        int idBusRoutes;
-        int quantitys = 0;
-        int number = 15;
-        int quantityMax = 0;
+        int idDrives;//id tài xế
+        int idBusRoutes;//id tuyến chạy
+        int quantity;//số lượng lượt chạy trong mỗi tuyến
+
         Scanner sc = new Scanner(System.in);
 
 
+        //mã tài xế
         while (!exist) {
             System.out.println("Nhập mã lái xe(10000-99999) :");
             idDrives = sc.nextInt();
@@ -47,56 +47,72 @@ public class AssignmentSheet {
             }
             System.out.println("list" + drivesList);
         }
+        //
 
 
-        System.out.println("Nhập số lượng tuyến chạy của lái xe :");
-        quantitys = sc.nextInt();
+        //số tuyến
+        do {
+            System.out.println("Nhập số lượng tuyến chạy của lái xe :");
+            quantitys = sc.nextInt();
+        }
+        while (quantitys< 0 || quantitys > 15);
 
+
+        //Nhập mã tuyến và số lượt chạy cho mỗi tuyến
         for (int i = 0; i < quantitys; i++) {
 
-            exist = false;
 
-            while (!exist) {
-                do {
-                    System.out.println("Nhập mã tuyến thứ : " + (i + 1));
-                    idBusRoutes = sc.nextInt();
+            //
+            exist = true;
 
-                }
-                while (idBusRoutes > 0 && idBusRoutes <= 15);
+            while (exist) {
 
-                exist = false;
 
+                System.out.println("Nhập mã tuyến thứ : " + (i + 1));
+                idBusRoutes = sc.nextInt();
+
+                //check exist in busRouteList
                 for (BusRoute b : busRouteList) {
                     if (b.getIdBusRoute() == idBusRoutes) {
 
-                        exist = true;
 
+                        exist=false;
                         //để check mã tuyến đã đc nhập trc đó,ko cho trùng mã tuyến
                         for (Map.Entry<BusRoute, Integer> entry : busRouteMap.entrySet()) {
-                            if (entry.getKey().getIdBusRoute() == idBusRoutes) {
-                                exist = false;
+                            if (entry.getKey().getIdBusRoute() == idBusRoutes) {-
                                 System.out.println("Mã tuyến đã được nhập trước đó!");
+                                exist=true;
                                 break;
                             }
+                        }
+                        //end
+
+                        boolean sucxist=false;
+                        if(!sucxist) {
+
+                            //Nhập số lượt chạy
+                            do{
+                                System.out.println("Nhập số lượt chạy:");
+                                quantity=sc.nextInt();
+                            }while (quantitys+quantity>15);
+
+                            busRouteMap.put(b, quantity);
 
                         }
 
-
-                    }
-                    for (int j = quantitys; j <= quantitys; j--) {
-                        quantityMax = number - quantitys + 1;
-                        System.out.println("số lượng max lượt chạy của lái xe là :" + quantityMax);
                     }
 
-                    busRouteMap.put(b, quantityMax);
                 }
+
 
             }
 
-
         }
 
+
     }
+
+
 
     public static void sortGiamDan(AssignmentSheet[] list, int len) {
 
