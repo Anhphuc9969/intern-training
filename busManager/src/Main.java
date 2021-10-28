@@ -45,12 +45,12 @@ public class Main {
         int input;
         do {
             System.out.println("--------Quản lý trả lương--------");
-            System.out.println("1.Nhập danh sách môn học. In ra danh sách môn học đã có  ");
-            System.out.println("2.Nhập danh sách giảng viên.  In ra danh sách GV đã có  ");
+            System.out.println("1.Nhập danh sách Lái xe. In ra danh sách lái xe đã có   ");
+            System.out.println("2.Nhập danh sách Tuyến.  In ra danh sách các tuyến đã có  ");
             System.out.println("3.Lập Bảng kê khai giảng dạy cho mỗi giảng viên và in danh sách ra màn hình");
-            System.out.println("4.Sắp xếp danh sách kê khai giảng dạy theo họ tên giảng viên     ");
-            System.out.println("5.Sắp xếp danh sách kê khai giảng dạy theo số tiết giảng dạy mỗi môn (giảm dần)");
-            System.out.println("6.Tính toán và lập bảng tính tiền công cho mỗi giảng viên");
+            System.out.println("4.Sắp xếp danh sách phân công Theo Họ tên lái xe   ");
+            System.out.println("5.Sắp xếp danh sách phân công Theo Số lượng tuyến đảm nhận trong ngày (giảm dần)");
+            System.out.println("6.Lập bảng kê tổng khoảng cách chạy xe trong ngày của mỗi lái xe");
             System.out.println("7.Thoát");
             System.out.println("Moi ban chọn chương trình");
 
