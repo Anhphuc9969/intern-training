@@ -7,19 +7,19 @@
 
         <property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
         <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:Anhphuc9969</property>
-        <property name="hibernate.connection.username">TRAINTICKETMANAGER</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:sa</property>
+        <property name="hibernate.connection.username">QLBV</property>
         <property name="hibernate.connection.password">123456</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
-<!--        <property name="hibernate.hbm2ddl.auto">update</property>-->
-<!--                <property name="hibernate.charSet">utf8</property>-->
-<!--                <property name="hibernate.characterEncoding">utf8</property>-->
-<!--                <property name="hibernate.useUnicode">yes</property>-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.charSet">utf8</property>
+        <property name="hibernate.characterEncoding">utf8</property>
+        <property name="hibernate.useUnicode">yes</property>
 
-        <mapping class="entity.TicketBuyers"/>
-        <mapping class="entity.TrainTickets"/>
-        <mapping class="entity.Order"/>
+        <mapping class="entity.NguoiMuaVe"/>
+        <mapping class="entity.VeTau"/>
+        <mapping class="entity.HoaDon"/>
     </session-factory>
 
 </hibernate-configuration>

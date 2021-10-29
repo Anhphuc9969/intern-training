@@ -19,14 +19,14 @@ import java.util.Scanner;
  */
 
 public class App {
-    private static TicketBuyersImpl TBIplm = new TicketBuyersImpl();
-    private static TrainTicketsRepository TTIplm = new TrainTicketsImpl();
+    private static TicketBuyersImpl ticketBuyersImpl = new TicketBuyersImpl();
+    private static TrainTicketsRepository trainTicketsRepository = new TrainTicketsImpl();
     private static List<TicketBuyers> ticketBuyersList=new ArrayList<>();
     public static int lenDriverStorage=0;
     private static List<TrainTickets> trainTicketsList  =new ArrayList<>();
 
     private static List<Order> orderList=new ArrayList<>();
-    private static OrderRepository OR =new OrderRepository();
+    private static OrderRepository orderRepository =new OrderRepository();
 
     private static int len=0;
 
@@ -72,18 +72,18 @@ public class App {
 
             switch (input) {
                 case 1:
-                    TicketBuyers A = new TicketBuyers();
-                    A.InputTicketBuyers();
-                    ticketBuyersList.add(A);
-                    TBIplm.addNew(ticketBuyersList);
+                    TicketBuyers ticketBuyers = new TicketBuyers();
+                    ticketBuyers.InputTicketBuyers();
+                    ticketBuyersList.add(ticketBuyers);
+                    ticketBuyersImpl.addNew(ticketBuyersList);
                     showTicketBuyer();
                     break;
 
                 case 2:
-                    TrainTickets T = new TrainTickets();
-                    T.InputTrainTickets();
-                    trainTicketsList.add(T);
-                    TTIplm.addNew(trainTicketsList);
+                    TrainTickets trainTickets = new TrainTickets();
+                    trainTickets.InputTrainTickets();
+                    trainTicketsList.add(trainTickets);
+                    trainTicketsRepository.addNew(trainTicketsList);
                     showTrainTickets();
                     break;
                    
@@ -92,20 +92,20 @@ public class App {
                     Order O=new Order();
                     O.InputOrder(ticketBuyersList,trainTicketsList);// nhap nguoi mua và nhap ve
                     orderList.add(O);
-                    OR.addOrder(orderList);
-                    OR.getAllOrder();
+                    orderRepository.addOrder(orderList);
+                    orderRepository.getAllOrder();
 
                     showOrder();
                     break;
                 case 4:
-                    Order ASS=new Order();
-                    ASS.sortByName(ticketBuyersList);
+                    Order order=new Order();
+                    order.sortByName(ticketBuyersList);
                     showTicketBuyer();
                     break;
                 case 5:
 
-                    Order ASSS=new Order();
-                    ASSS.sortByTotalRoute(orderList);
+                    Order order1=new Order();
+                    order1.sortByTotalRoute(orderList);
                     showTrainTickets();
                     break;
                 case 6:

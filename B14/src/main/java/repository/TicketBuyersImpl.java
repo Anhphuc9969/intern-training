@@ -2,6 +2,7 @@ package repository;
 
 
 import dto.TicketBuyersDto;
+import entity.TrainTickets;
 import org.hibernate.query.Query;
 import repository.TicketBuyersRepository;
 import entity.TicketBuyers;
@@ -42,16 +43,17 @@ public class TicketBuyersImpl implements TicketBuyersRepository {
     public static List<TicketBuyers> getAllUser() {
 
         Session session = HibernateUtils.getSessionFactory().openSession();
-        List<TicketBuyers> ticketBuyers = new ArrayList<>();
+
         try {
-            Query<TicketBuyers> query = session.createQuery("SELECT i FROM TicketBuyers i", TicketBuyers.class);
-            ticketBuyers = query.list();
+            List<TicketBuyers> ticketBuyers = (List<TicketBuyers>) session.createQuery("from TICKET_BUYERS").list();
+//            session.getTransaction().commit();
+            return ticketBuyers;
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             session.close();
         }
-        return ticketBuyers;
+        return null;
     }
 
     @Override
@@ -93,10 +95,7 @@ public class TicketBuyersImpl implements TicketBuyersRepository {
     public List<TicketBuyersDto> getAllTicketBuyersDto() {
         return null;
     }
-//Cảm ơn anh hoàng ngọc giáp đã tài trợ code cho tôi
-    /*
-    @author: hoang ngoc giap
-     */
+
 //    public List<TicketBuyers> getAllTicketBuyers() {
 //        Session session = HibernateUtils.getSessionFactory().openSession();
 //        List<TicketBuyers> ticketBuyers = new ArrayList<>();

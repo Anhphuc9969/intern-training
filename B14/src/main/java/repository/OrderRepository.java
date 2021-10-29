@@ -13,6 +13,7 @@ public class OrderRepository {
         if (ConnnectionUtils.isEmpty(orderList)) {
             return;
         }
+
         Session session = HibernateUtils.getSessionFactory().openSession();
         try {
 //            session.beginTransaction();
