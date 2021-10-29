@@ -31,6 +31,8 @@ public class TrainTickets implements Serializable{
 
     @Transient
     Scanner sc = new Scanner(System.in);
+
+
     private final static String GheVip = "Ghế vip";
     private final static String GheThuong= "Ghế thường";
 
@@ -77,4 +79,6 @@ public class TrainTickets implements Serializable{
                 ", UNIT_PRICE='" + UNIT_PRICE + '\'' +
                 '}';
     }
+
+
 }

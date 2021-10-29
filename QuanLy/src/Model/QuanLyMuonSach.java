@@ -11,7 +11,8 @@ public class QuanLyMuonSach  {
 
     private Sach[] listSach=new Sach[5];
     private int tong=0;
-    private int lenSach=0;
+  
+  
 
     private int[] quantities=new int[5];
 

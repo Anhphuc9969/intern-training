@@ -6,8 +6,7 @@ import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import service.OrderTable;
-import service.TicketTable;
+
 
 import java.util.*;
 import java.util.List;
@@ -24,10 +23,9 @@ import javax.persistence.ManyToOne;
 @Table(name = "ORDER_TRAIN_TICKETS")
 public class Order {
 
-    @Transient
-    private TicketBuyers ticketBuyerss;
-    private static List<OrderTable> orderTableList = new ArrayList<>();
-    private static List<OrderTable> orderTables = new ArrayList<>();
+
+
+
     @Transient
     private Map<TrainTickets, Integer> trainTicketsIntegerMap = new HashMap<>();
 
@@ -71,7 +69,7 @@ public class Order {
             for (int i = 0; i < 1000; i++) {
                 if (ticketBuyersList.get(i) != null && ticketBuyersList.get(i).getID() == idTicketBuyers) {
                     exist = true;
-                    this.ticketBuyerss = ticketBuyersList.get(i);
+                    this.ticketBuyers = ticketBuyersList.get(i);
                     break;
                 }
             }
@@ -100,7 +98,6 @@ public class Order {
                 for (TrainTickets b : trainTicketsList) {
                     if (b.getID() == idTrainTickets) {
 
-
                         exist = false;
                         //để check mã ve đã đc nhập trc đó,ko cho trùng mã ve
                         for (Map.Entry<TrainTickets, Integer> entry : trainTicketsIntegerMap.entrySet()) {
@@ -121,7 +118,9 @@ public class Order {
                                 quantity = sc.nextInt();
                             } while (quantitys + quantity > 20);
 
+                            this.setTrainTickets(b);
                             trainTicketsIntegerMap.put(b, quantity);
+
 
 
                         }
@@ -161,7 +160,6 @@ public class Order {
     @Override
     public String toString() {
         return "Order{" +
-                "ticketBuyerss=" + ticketBuyerss +
                 ", trainTicketsIntegerMap=" + trainTicketsIntegerMap +
                 ", ID=" + ID +
                 ", quantity=" + quantity +

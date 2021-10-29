@@ -1,6 +1,8 @@
 package repository;
 
 import entity.Order;
+import entity.TicketBuyers;
+import entity.TrainTickets;
 import org.hibernate.Session;
 import utils.ConnnectionUtils;
 import utils.HibernateUtils;
@@ -15,18 +17,16 @@ public class OrderRepository {
         try {
 //            session.beginTransaction();
             session.getTransaction().begin();
-            for (Order O: orderList
-            ) {
+            for (Order O: orderList) {
                 O.toString();
-                O.getTicketBuyers().toString();
-                O.getTrainTickets().toString();
+
+                TicketBuyers ticketBuyers=O.getTicketBuyers();
+                TrainTickets trainTickets=O.getTrainTickets();
                 session.save(O);
             }
             session.getTransaction().commit();
-
-
         }catch (Exception e){
-           e.printStackTrace();
+            e.printStackTrace();
             session.getTransaction().rollback();
         }finally {
             session.close();
@@ -41,6 +41,7 @@ public class OrderRepository {
             Query<Order> query = session.createQuery(sql);
             List<Order> orderList = query.getResultList();
             session.getTransaction().commit();
+
             return orderList;
         } catch (Exception e) {
             System.out.println(e);
@@ -51,4 +52,6 @@ public class OrderRepository {
         return null;
 
     }
+
+
 }

@@ -7,7 +7,7 @@ import repository.OrderRepository;
 import repository.TicketBuyersImpl;
 import repository.TrainTicketsImpl;
 import repository.TrainTicketsRepository;
-import service.TicketTable;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class App {
     private static List<TicketBuyers> ticketBuyersList=new ArrayList<>();
     public static int lenDriverStorage=0;
     private static List<TrainTickets> trainTicketsList  =new ArrayList<>();
-    private static List<TicketTable> ticketTables =new ArrayList<>();
+
     private static List<Order> orderList=new ArrayList<>();
     private static OrderRepository OR =new OrderRepository();
 
@@ -63,7 +63,7 @@ public class App {
             System.out.println("2.Nhập danh sách loại vé.  In ra danh sách các loại vé đã có   ");
             System.out.println("3.Nhập danh sách hóa đơn mua vé cho mỗi người mua và in danh sách ra màn hình");
             System.out.println("4.Sắp xếp danh sách hóa đơn   Theo Họ tên nguoi mua   ");
-            System.out.println("5.Sắp xếp danh sách hóa đơn   Theo Số lượng vé mua (giảm dần)\n");
+            System.out.println("5.Sắp xếp danh sách hóa đơn   Theo Số lượng vé mua (giảm dần)");
             System.out.println("6.Lập bảng kê số tiền phải tra cho mỗi người mua ");
             System.out.println("7.Thoát");
             System.out.println("Moi ban chọn chương trình");
@@ -79,7 +79,6 @@ public class App {
                     showTicketBuyer();
                     break;
 
-
                 case 2:
                     TrainTickets T = new TrainTickets();
                     T.InputTrainTickets();
@@ -94,6 +93,8 @@ public class App {
                     O.InputOrder(ticketBuyersList,trainTicketsList);// nhap nguoi mua và nhap ve
                     orderList.add(O);
                     OR.addOrder(orderList);
+                    OR.getAllOrder();
+
                     showOrder();
                     break;
                 case 4:
@@ -114,6 +115,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        menu();
+       menu();
+
     }
 }

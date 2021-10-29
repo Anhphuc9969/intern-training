@@ -15,7 +15,6 @@ import java.util.Scanner;
 @AllArgsConstructor
 @Entity(name = "TICKET_BUYERS")
 
-
 public class TicketBuyers implements Serializable {
     @Id
     @Column(nullable = false)

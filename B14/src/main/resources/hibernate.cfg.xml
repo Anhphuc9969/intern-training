@@ -17,7 +17,6 @@
         <!--        <property name="hibernate.characterEncoding">utf8</property>-->
         <!--        <property name="hibernate.useUnicode">yes</property>-->
 
-
         <mapping class="entity.TicketBuyers"/>
         <mapping class="entity.TrainTickets"/>
         <mapping class="entity.Order"/>
