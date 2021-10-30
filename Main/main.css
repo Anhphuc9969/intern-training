@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  .container {
+    width: 999px;
+    height: auto;
+    margin-left: 50px;
+  }
+  /*======header=====*/
+  .main-menu__list {
+    margin: 0;
+    padding-right: 30px ; 
+    margin-top: 10px;
+    list-style: none;
+  }
+  .main-menu__item {
+    display: inline-block;
+    padding: 8px 30px;
+  }
+  .main-menu__item:hover {
+    background: #6a93cd;
+  }
+  .main-menu__link {
+    display: block;
+    text-decoration: none;
+    color: #e4e51a;
+  }
+ .main-menu__list1{
+     padding-left: 200px;
+ }
+ .main-menu {
+    width: 999 px;
+  
+    display: grid;
+    grid-template-columns: 399px 600px;
+ }
+  
+  .slideshow{
+    
+    width: 999px;
+    height: 500px;
+  }
+  .img-fluid2{margin-top: 0px;
+      width: 999px;
+      height: 500px;
+  }
+ .images{
+    height: 500px;
+    width: 1200px;
+    padding-top: 100px;
+    padding-left:50px ;
+    color: white;
+    background-size: cover;
+    background-image: url("Images/lodging.png")
+ }
+
+ /*=======Content======*/
+ .content{
+     background: rgb(206, 202, 202);
+     width: 1200px;
+ }
+ .text-content{
+     color: rgb(107, 101, 101);
+ }
+ .Location__list{
+    width: 790px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-gap: 20px 1px;
+ }
+ .Location__list1{
+    width: 999 px;
+  
+    display: grid;
+    grid-template-columns: 780px 50px;
+ }
+ .Location__item1{
+     width: 20px;
+ }
+ .neighborhood-guides{
+     padding-left: 30px;
+     padding-top: 20px;
+     padding-bottom: 30px;
+ }
+
+ /*======Footer=======*/
+ .footer-location{
+     width: 1200px;
+     height: 150px;
+     background: rgb(226, 221, 221);
+     padding-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+ }
+ .footer-link1{
+     padding-left: 50px;
+ }
+ .footer-link2{
+     padding-left: 100px;
+ }
+
+
+ @media screen and (max-width:768px) {
+    .container {
+        width: 999px;
+        height: auto;
+        margin-left: 50px;
+      }
+      /*======header=====*/
+      .main-menu__list {
+        margin: 0;
+        padding-right: 30px ; 
+        margin-top: 10px;
+        list-style: none;
+      }
+      .main-menu__item {
+        display: inline-block;
+        padding: 8px 30px;
+      }
+      .main-menu__item:hover {
+        background: #6a93cd;
+      }
+      .main-menu__link {
+        display: block;
+        text-decoration: none;
+        color: #e4e51a;
+      }
+     .main-menu__list1{
+         padding-left: 200px;
+     }
+     .main-menu {
+        width: 999 px;
+      
+        display: grid;
+        grid-template-columns: 399px 600px;
+     }
+      
+      .slideshow{
+        
+        width: 999px;
+        height: 500px;
+      }
+      .img-fluid2{margin-top: 0px;
+          width: 999px;
+          height: 500px;
+      }
+     .images{
+        height: 500px;
+        width: 1200px;
+        padding-top: 100px;
+        padding-left:50px ;
+        color: white;
+        background-size: cover;
+        background-image: url("Images/lodging.png")
+     }
+     .content{
+         background: rgb(206, 202, 202);
+         width: 1200px;
+     }
+     .text-content{
+         color: rgb(107, 101, 101);
+     }
+     .Location__list{
+        width: 790px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+        grid-gap: 20px 1px;
+     }
+     .Location__list1{
+        width: 999 px;
+      
+        display: grid;
+        grid-template-columns: 780px 50px;
+     }
+     .Location__item1{
+         width: 20px;
+     }
+     .neighborhood-guides{
+         padding-left: 30px;
+         padding-top: 20px;
+         padding-bottom: 30px;
+     }
+     .footer-location{
+         width: 1200px;
+         height: 150px;
+         background: rgb(226, 221, 221);
+         padding-left: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+     }
+     .footer-link1{
+         padding-left: 50px;
+     }
+     .footer-link2{
+         padding-left: 100px;
+     }
+ }
