@@ -13,12 +13,10 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-                <property name="hibernate.charSet">utf8</property>
-                <property name="hibernate.characterEncoding">utf8</property>
-                <property name="hibernate.useUnicode">yes</property>
+        <property name="hibernate.charSet">utf8</property>
+        <property name="hibernate.characterEncoding">utf8</property>
+        <property name="hibernate.useUnicode">yes</property>
 
-<!--        <mapping class="entity.TicketBuyers"/>-->
-<!--        <mapping class="entity.TrainTickets"/>-->
         <mapping class="model.Student"/>
     </session-factory>
 
