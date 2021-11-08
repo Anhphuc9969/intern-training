@@ -1,0 +1,59 @@
+header{
+    color: black;
+}
+a{
+    color: black;
+    
+}
+a:hover{
+    color: rgb(22, 205, 238);
+}
+.logo{
+    padding-left: 80px;
+    padding-top: 15px;
+}
+footer{
+    margin-top: 200px;
+    background-color: black;
+    color: blanchedalmond;
+}
+.footer_conten{
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.footer_conten a{
+    color: blanchedalmond;
+}
+.img-content{
+    width: 100%;
+}
+ .img-inner{
+     width: 100%;
+ }
+.banner{
+    text-align: center;
+    background-color: rgb(44, 182, 182);
+    color: white;
+    font-size:10px;
+    height: 180px;
+    
+}
+.banner .col{
+    margin-top: 45px;
+}
+.needproject
+{
+    margin-top: 50px;
+    text-align: center;
+}
+.slide{
+    height: 348px;
+    text-align: center;
+    background-image: url("fileanh/fileanh/girl6.png");
+    color: white;
+}
+.slide-conten{
+    padding-top: 80px;
+}
